@@ -1,6 +1,6 @@
 # 🎮 Unity VR MP Project Setup
 
-### Description
+## Description
 
 Project integrating 3 Unity templates:
 
@@ -8,29 +8,32 @@ Project integrating 3 Unity templates:
 - **VR Multiplayer Template**
 - **VR Template**
 
+## Contact
+
+[Discord](https://discord.gg/Jr4vmVKs)    [LinkedIn](https://www.linkedin.com/in/hernandonj/)    [Medium](https://medium.com/@hernandonj)
+
+---
+
 ## Index
 
 [**Requirements**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#-requirements)
 
 [**Installation**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#-installation)
 
-[Clone the repository and install git lfs](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#1-clone-the-repository-and-install-git-lfs)
-
-[Templates](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#2-templates)
-
-[Open in Unity](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#3-open-in-unity)
-
-[Verify Installation](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#4-verify-installation)
+1. [Clone the repository and install git lfs](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#1-clone-the-repository-and-install-git-lfs)
+2. [Templates and Samples folders](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#2-templates-and-samples-folders)
+3. [Open in Unity](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#3-open-in-unity)
+4. [Verify Installation](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#4-verify-installation)
 
 [**Project structure**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#-project-structure)
 
 [**Development Workflow**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#-development-workflow)
 
-[**Known issues**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#known-issues)
-
 [**Documentation**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#documentation)
 
-[Discord](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#discord)
+[**Known issues**](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#known-issues)
+
+---
 
 ## 📋 Requirements
 
@@ -42,21 +45,29 @@ Project integrating 3 Unity templates:
 
 ### 1. Clone the repository and install git lfs
 
-`git clone https://github.com/HernandoNJ/VR_MP_Master.git`
+- Clone project using git or GitHub
+    
+    `git clone https://github.com/HernandoNJ/VR_MP_Master.git`
+    
+- In the local repository folder, using git or GitHub, initialize gif lfs
+    
+    `git lfs install`
+    
 
-`cd VR_MP_Master`
+---
 
-`git lfs install`
+### 2. Templates and Samples folders
 
-### 2. Templates
-
-**REQUIRED**
-
-- Download the Templates: [download link](https://drive.google.com/file/d/1t8dojugnnsZZUnzntCI1gT9GDuAbJVmw/view?usp=sharing)
+- Download the Templates: [download link](https://drive.google.com/file/d/1HGPdIHZtcX4ISzSaFVj3xhETKf401M2s/view?usp=sharing)
 - Unzip
-- Add the Templates folder and its .meta file into the root Assets folder
+- Copy the content from the **MPTPVR templates** folder in the project’s root **Assets folder** (Templates, Samples and their .meta files).
+    
+    *If a warning about replacing files and/or folders is displayed, replace the folder.*
+    
+    **Don’t modify any assets from Templates folder. If required any assets from there, copy, paste and rename them in another location of the project.**
+    
 
-**Don’t modify any assets from Templates folder. Copy, paste and rename the assets in another location of the project.**
+---
 
 ### 3. Open in Unity
 
@@ -64,15 +75,24 @@ Project integrating 3 Unity templates:
 2. **Add** → Add Project from disk
     1. Select project folder
 3. **Open**
-4. Wait for initial import
+4. Wait for initial loading
+    
+    *If a warning saying “Enter Safe Mode” is displayed, check for this in [known issues](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#known-issues)*
+    
+5. When the project is open
+    
+    *If a warning: `GameplayKitInputSystem_Actions.cs(1210,21): is in conflict with …` is displayed, check for this in [known issues](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#known-issues)*
+    
+
+---
 
 ### 4. Verify Installation
 
-✅ You should see:
-
-- `Assets/Templates/` with content
+- Verify if `Assets/Templates/` and `Assets/Templates/` have their own content
 - No errors in Unity console
 - Project scenes working properly
+
+---
 
 ## 📁 Project Structure
 
@@ -90,9 +110,11 @@ Assets/
 └── Scenes/
 ```
 
+---
+
 ## 🔧 Development Workflow
 
-### ❌ DON'T do this:
+### Avoid this:
 
 `Modify Assets/Templates/Character.prefab`
 
@@ -105,25 +127,49 @@ Assets/
 4. Modify freely  
 ```
 
-## Known issues
+---
 
-### **Enter safe mode warning - project initialization**
+## Documentation
+
+[**Multiplayer Third Person Gameplay Template**](https://docs.unity3d.com/Packages/com.unity.template.multiplayer-third-person-gameplay@1.0/manual/index.html)
+
+[**VR Multiplayer Template**](https://docs.unity3d.com/Packages/com.unity.template.vr-multiplayer@2.0/manual/index.html)
+
+[**VR Template**](https://docs.unity3d.com/Packages/com.unity.template.vr@9.2/manual/index.html)
+
+---
+
+### Known issues
+
+**Warning: GameplayInputSystem_Actions**
+
+`Assets\Core\Scripts\Runtime\Framework\GameplayKitInputSystem_Actions.cs(1210,21): warning CS0436: The type 'GameplayInputSystem_Actions' in …. conflicts with …`
+
+- Remove the `Assets/Core` folder in the Unity editor
+
+---
+
+**Project Loading**
+
+**Warning: Enter safe mode warning**
 
 - Click on Continue
 
-### **Warning: Multiplayer Services**
+---
+
+**Warning: Multiplayer Services**
 
 Message informing about incompatibility of Multiplayer Services, Lobby and Realy with Unity Multiplayer Services SDK
 
 - Click on close
 
-### **Error: Samples namespace**
+---
 
-`Assets\Templates\VRMP\VRMPAssets\Scripts\Gameplay\MessageBoard\NetworkMessageBoard.cs(5,42): error CS0234: The type or namespace name 'Samples' does not exist in the namespace 'UnityEngine.XR.Interaction.Toolkit' (are you missing an assembly reference?)`
+**Error: Samples namespace**
 
-Go to the Package Manager
+Missing assembly reference in `Assets\Templates\VRMP\VRMPAssets\Scripts\Gameplay\MessageBoard\NetworkMessageBoard.cs(5,42):`
 
-Import the following samples from the packages mentioned:
+Go to the Package Manager and import the following samples from these packages :
 
  **XRIT 3.3.1**
 
@@ -136,22 +182,20 @@ Import the following samples from the packages mentioned:
 
 - Hands visualizer
 
-### **Warning: GameplayInputSystem_Actions**
+---
 
-`Assets\Core\Scripts\Runtime\Framework\GameplayKitInputSystem_Actions.cs(1210,21): warning CS0436: The type 'GameplayInputSystem_Actions' in …. conflicts with the imported type 'GameplayInputSystem_Actions' in 'Blocks.Gameplay.Core, Version=0.0.0.0, …`
+**Issues in XR Plugin Management - Project validation - Android Tab**
 
-- Remove the `Assets/Core` folder in the Unity editor
-
-### Issues in XR Plugin Management - Project validation - Android Tab
-
-### **Warning: [OpenXR] At least one interaction profile must be added.**
+**Warning: [OpenXR] At least one interaction profile must be added.**
 
 - Click on Edit
 - In the Enabled interaction profiles section:
     - Click on +
     - Select the Oculus Touch Controller Profile
 
-### Warning: [XR] [Spatial Keyboard] TextMesh Pro - TMP Essentials must be installed for this sample
+---
+
+**Warning: [XR] [Spatial Keyboard] TextMesh Pro - TMP Essentials must be installed for this sample**
 
 **Option 1**
 
@@ -163,12 +207,6 @@ Import the following samples from the packages mentioned:
 - Go to Window/TextMeshPro/Import TMP Essentials Resources
 - Click on Import
 
-## Documentation
+---
 
-- [**Multiplayer Third Person Gameplay Template**](https://docs.unity3d.com/Packages/com.unity.template.multiplayer-third-person-gameplay@1.0/manual/index.html)
-- [**VR Multiplayer Template**](https://docs.unity3d.com/Packages/com.unity.template.vr-multiplayer@2.0/manual/index.html)
-- [**VR Template**](https://docs.unity3d.com/Packages/com.unity.template.vr@9.2/manual/index.html)
-
-### Discord
-
-[Discord Link](https://discord.gg/Jr4vmVKs)
+[Back to top](https://github.com/HernandoNJ/VR_MP_Master?tab=readme-ov-file#-unity-vr-mp-project-setup)
